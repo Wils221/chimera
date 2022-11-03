@@ -32,6 +32,25 @@ const database = {
       { id: 1, size: "Lightning Breath" },
       { id: 2, size: "Ice Breath" },
       { id: 3, size: "Fire Breath" }
-    ]
+    ],
+    customStuffy: [
+      {
+        id: 1,
+        headId: 3,
+        torsoId: 2,
+        legId: 3,
+        tailId: 2,
+        armId: 1,
+        powerId: 2
+      }
+    ],
+    chimeraBuilder: []
   };
   
+
+  export const setTorso = (id) => {
+    database.chimeraBuilder.torsoId = id
+}
+export const getTorsos = () => {
+  return database.torsos.map(torso => ({...torso}))
+}
