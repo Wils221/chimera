@@ -35,18 +35,26 @@ const database = {
     ],
     customStuffy: [
       {
-        id: 1,
-        headId: 3,
-        torsoId: 2,
-        legId: 3,
-        tailId: 2,
-        armId: 1,
-        powerId: 2
+          id: 1,
+          headId: 3,
+          torsoId: 2,
+          legId: 3,
+          tailId: 2, 
+          armId: 1,
+          powerId: 2
       }
     ],
-    chimeraBuilder: []
+    chimeraBuilder: {},
   };
   
+
+  export const getHeads = () => {
+    return database.heads.map(head => ({...head}))
+}
+
+export const setHeads = (id) => {
+  database.chimeraBuilder.headId = id
+}
 
   export const setTorso = (id) => {
     database.chimeraBuilder.torsoId = id
