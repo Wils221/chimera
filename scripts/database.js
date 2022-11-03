@@ -34,4 +34,8 @@ const database = {
       { id: 3, size: "Fire Breath" }
     ]
   };
-  
+
+
+  export const getLegs =() => {
+  return database.legs.map(head => ({...leg}))
+}  
