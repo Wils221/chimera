@@ -55,3 +55,10 @@ const database = {
 export const setHeads = (id) => {
   database.chimeraBuilder.headId = id
 }
+
+  export const setTorso = (id) => {
+    database.chimeraBuilder.torsoId = id
+}
+export const getTorsos = () => {
+  return database.torsos.map(torso => ({...torso}))
+}
