@@ -35,3 +35,12 @@ const database = {
     ]
   };
   
+
+  export const getArms = () => {
+    return database.heads.map(arm => ({...arm}))
+  }
+
+  export const setArms = (id) => {
+    database.chimeraBuilder.armId = id
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+  }
