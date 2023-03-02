@@ -46,6 +46,13 @@ const database = {
     ],
     chimeraBuilder: {},
   };
+
+
+  export const getLegs =() => {
+  return database.legs.map(leg => ({...leg}))
+}  
+export const set = (id) => {
+  database.chimeraBuilder.legId = id
   
 
   export const getHeads = () => {
