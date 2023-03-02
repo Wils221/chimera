@@ -51,6 +51,8 @@ const database = {
   export const getLegs =() => {
   return database.legs.map(leg => ({...leg}))
 }  
+export const set = (id) => {
+  database.chimeraBuilder.legId = id
   
 
   export const getHeads = () => {
@@ -60,8 +62,6 @@ const database = {
 export const setHeads = (id) => {
   database.chimeraBuilder.headId = id
 }
-<<<<<<< HEAD
-=======
 
   export const setTorso = (id) => {
     database.chimeraBuilder.torsoId = id
@@ -69,4 +69,3 @@ export const setHeads = (id) => {
 export const getTorsos = () => {
   return database.torsos.map(torso => ({...torso}))
 }
->>>>>>> main
